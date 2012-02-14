@@ -1,47 +1,36 @@
 name: ${project.name}
-main: com.dumptruckman.spamhammer.${project.name}
-version: "${project.version}-${project.build.number}"
+main: ${project.plugin.main}
+version: ${project.plugin.version}
 author: ${project.plugin.author}
-depend: ${project.plugin.depend}
 
 commands:
   spamunban:
     description: Unbans a player banned by SpamHammer.
-    usage: |
-           /<command> <playername>
-           /<command> dumptruckman - unbans dumptruckman if he was banned by SpamHammer.
-    aliases: dc
+    usage: /<command> PLAYER_NAME - unbans the specified player if they were banned by SpamHammer.
   spamunmute:
     description: Unmutes a player banned by SpamHammer.
-    usage: |
-           /<command> <playername>
-           /<command> dumptruckman - unmutes dumptruckman if he was muted by SpamHammer.
-    aliases: dc
+    usage: /<command> PLAYER_NAME - unmutes the specified player if they were muted by SpamHammer.
   spamreset:
     description: Resets a player's SpamHammer punishment level.
-    usage: |
-           /<command> <playername>
-           /<command> dumptruckman - Makes it like dumptruckman never spammed in the first place.
-    aliases: dc
+    usage: /<command> PLAYER_NAME - resets the punishment process for the specified player.
     
 permissions:
   spamhammer.*:
-    description: Give access to all dChest commands
+    description: Give access to all spamhammer commands.
     children:
       spamhammer.unban: true
       spamhammer.unmute: true
       spamhammer.reset: true
       spamhammer.ignore: true
   spamhammer.unban:
-    description: Allows use of /spamunban
+    description: Allows use of /spamunban.
     default: op
   spamhammer.unmute:
-    description: Allows use of /spamunmute
+    description: Allows use of /spamunmute.
     default: op
   spamhammer.reset:
-    description: Allows use of /spamreset
+    description: Allows use of /spamreset.
     default: op
   spamhammer.ignore:
-    description: Allows user to be unaffected by spamhammer
+    description: Exempts players from spamhammer.
     default: op
-  

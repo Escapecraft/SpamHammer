@@ -4,24 +4,24 @@
 
   <groupId>com.dumptruckman.spamhammer</groupId>
   <artifactId>SpamHammer</artifactId>
-  <version>1.7b-Tul</version>
+  <version>1.8</version>
   <packaging>jar</packaging>
 
   <name>SpamHammer</name>
-  <description></description>
+  <description>Bukkit Anti-Spam plugin.</description>
   <url>https://github.com/Tulonsae/SpamHammer</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.build.number>1</project.build.number>
     <project.plugin.author>dumptruckman</project.plugin.author>
-    <project.plugin.depend>[Permissions]</project.plugin.depend>
+    <project.plugin.main>${project.groupId}.${project.name}</project.plugin.main>
+    <project.plugin.version>${project.version}</project.plugin.version>
   </properties>
 
   <repositories>
     <repository>
       <id>bukkit-repo</id>
-      <url>http://repo.bukkit.org/artifactory/repo</url>
+      <url>http://repo.bukkit.org/content/groups/public</url>
     </repository>
   </repositories>
 
@@ -29,7 +29,7 @@
     <dependency>
       <groupId>org.bukkit</groupId>
       <artifactId>bukkit</artifactId>
-      <version>1.0.0-R1-SNAPSHOT</version>
+      <version>1.1-R3</version>
       <type>jar</type>
       <scope>compile</scope>
       <optional>false</optional>

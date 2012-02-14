@@ -24,7 +24,7 @@ public class SpamHammerPlayerListener extends PlayerListener {
 
     @Override
     public void onPlayerChat(PlayerChatEvent event) {
-        if (event.getPlayer().isOp() || (plugin.usePerms && event.getPlayer().hasPermission("spamhammer.ignore")))
+        if (event.getPlayer().isOp() || event.getPlayer().hasPermission("spamhammer.ignore"))
             return;
         if (plugin.isMuted(event.getPlayer().getName())) {
             event.getPlayer().sendMessage(plugin.config.getString(MUTED_MESSAGE.toString()));
@@ -46,7 +46,7 @@ public class SpamHammerPlayerListener extends PlayerListener {
     }
 
     public void onPlayerCommandPreprocess(PlayerCommandPreprocessEvent event) {
-        if (event.getPlayer().isOp() || (plugin.usePerms && event.getPlayer().hasPermission("spamhammer.ignore")))
+        if (event.getPlayer().isOp() || event.getPlayer().hasPermission("spamhammer.ignore"))
             return;
         if (plugin.isMuted(event.getPlayer().getName())) {
             event.getPlayer().sendMessage(plugin.config.getString(MUTED_MESSAGE.toString()));
