@@ -1,0 +1,38 @@
+abovelimit:
+    message: You are typing too fast!
+message:
+    limit: 6
+    preventabovelimit: true
+    repeat:
+        limit: 6
+        block: true
+    period: 6
+ban:
+    message: You have been banned for spamming.
+kick:
+    message: You have been kicked for spamming.  Keep it up and you'll be banned.
+cooloff:
+    message: Spamming punishment reset.  Be nice!
+    time: 300
+commands:
+    unmute:
+        failure: Player is not muted.
+        success: Player has been unmuted.
+    unban:
+        failure: Player is not banned by SpamHammer.
+        success: Player has been unbanned
+    reset:
+        success: Player's punishment level reset.
+punishments:
+    ban: true
+    kick: true
+    mute: true
+commandlist:
+    possiblespam:
+    - /me
+mute:
+    message:
+        unmute: You are no longer muted.
+        muted: You are muted!
+        mute: You will be muted for %t second(s) for spamming.  Keep it up and you'll be kicked.
+    length: 30
